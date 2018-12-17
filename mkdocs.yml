@@ -1,29 +1,20 @@
-site_name: WSO2 Identity Server
+site_name: WSO2 Update Manager Documentation
 
 nav:
-    - Home: index.md
-    - About: about.md
+    - Home: WSO2_Updates.md
     - Getting Started:
-      - 'Product Overview': 'product_overview.md'
-      - 'QSG': 'QSG.md'
-      - 'Samples': 'QSG.md'
-      - 'Release Notes': 'QSG.md'
-      - 'Compliance and Privacy': 'QSG.md'
-    - Architecture:
-      - 'Architecture and Process Flow': 'architecture.md'
-      - 'Provisioning Architecture': 'architecture.md'
-      - 'User Management Architecture': 'architecture.md'
-    - User Guides:
-      - 'Authentication': 'QSG.md'
-      - 'Account Management and Provisioning': 'QSG.md'
-      - 'API Security': 'QSG.md'
-      - 'Access Control': 'QSG.md'
-      - 'Analytics': 'QSG.md'
-    - Admin Guides:
-      - 'Developer Guide': 'product_overview.md'
-      - 'Deployment Guide': 'QSG.md'
-      - 'Integration Guide': 'QSG.md'
-      - 'Troubleshooting Guide': 'QSG.md'
+      - 'Introduction': 'Introduction.md'
+      - 'Using WSO2 In-Place Updates': 'Using_WSO2_In-Place_Updates.md'
+    - Using WSO2 Update Manager: 
+      - 'Getting Started': 'Getting_Started.md'
+      - 'Getting Continuous Updates': 'Getting_Continuous_Updates.md'
+      - 'Restoring the Previous Setup': 'Restoring_the_Previous_Setup.md'
+      - 'WUM Commands Guide': 'Getting_Continuous_Updates.md'
+    - Guides:
+      - 'Troubleshooting Guide': 'Troubleshooting.md'
+      - 'Best Practices Guide': 'Best_Practices_Guide.md'
+    - FAQ:
+      - 'Frequently Asked Questions': 'FAQ.md'
 
 theme:
   name: 'material'
@@ -33,7 +24,7 @@ theme:
   font:
     text: 'Nunito Sans'
     code: 'Courier New'
-  logo: 'images/logo.svg'
+  logo: 'images/WSO2_Software_Logo.png'
   language: 'en'
   feature:
     tabs: true  
@@ -51,3 +42,19 @@ extra_css: [extra.css]
 markdown_extensions:
   - admonition
   - codehilite
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
