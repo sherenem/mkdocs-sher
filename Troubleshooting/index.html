@@ -1,0 +1,977 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-\.]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Troubleshooting Guide - WSO2 Update Manager Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,700|Courier+New">
+        <style>body,input{font-family:"Nunito Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Courier New","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#troubleshooting" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="WSO2 Update Manager Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="../images/WSO2_Software_Logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                WSO2 Update Manager Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Troubleshooting Guide
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Introduction/" title="Getting Started" class="md-tabs__link">
+          Getting Started
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Getting_Started/" title="Using WSO2 Update Manager" class="md-tabs__link">
+          Using WSO2 Update Manager
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Guides" class="md-tabs__link md-tabs__link--active">
+          Guides
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../FAQ/" title="FAQ" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="WSO2 Update Manager Documentation" class="md-nav__button md-logo">
+      
+        <img src="../images/WSO2_Software_Logo.png" width="48" height="48">
+      
+    </a>
+    WSO2 Update Manager Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../WSO2_Updates/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using_WSO2_In-Place_Updates/" title="Using WSO2 In-Place Updates" class="md-nav__link">
+      Using WSO2 In-Place Updates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Using WSO2 Update Manager
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Using WSO2 Update Manager
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting_Started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting_Continuous_Updates/" title="Getting Continuous Updates" class="md-nav__link">
+      Getting Continuous Updates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Restoring_the_Previous_Setup/" title="Restoring the Previous Setup" class="md-nav__link">
+      Restoring the Previous Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting_Continuous_Updates/" title="WUM Commands Guide" class="md-nav__link">
+      WUM Commands Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Troubleshooting Guide" class="md-nav__link md-nav__link--active">
+      Troubleshooting Guide
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Best_Practices_Guide/" title="Best Practices Guide" class="md-nav__link">
+      Best Practices Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="troubleshooting">Troubleshooting</h1>
+<p>WUM is a simple command-line tool that you can download and use to get
+the latest updates for a WSO2 product. To get started from the command
+line, execute the 'wum --help' command, and the list of available
+commands and its usage will be explained. If you want detailed,
+step-by-step instructions on how to use WUM to get a WSO2 product
+updated, see <a href="Getting-Started_103318232.html">Getting Started with WUM</a>.</p>
+<p>We will now explain how to troubleshoot errors that you may encounter
+while working with WUM.</p>
+<p>WUM Message</p>
+<p>Explanation</p>
+<p>Possible Solution</p>
+<p>wum: unable to connect to WSO2 Update</p>
+<p>The WUM client cannot connect to the WSO2 Update server due to a network
+failure or the server response is not successful.</p>
+<p>Check your network connection.</p>
+<p>If the connection is still failing, please report to WSO2 at
+<a href="https://wso2.com/contact">https://wso2.com/contact</a>.</p>
+<p>Please be sure to attach the details of the error when you report. You
+can get the details by running the same command again using the '-v'
+flag.</p>
+<p>wum: update is not available in WSO2 Update: &lt;UpdateFileName&gt;</p>
+<p>WUM is unable to get updates from the WSO2 Update service due to a
+server error.</p>
+<p>Try running the wum command again.</p>
+<p>If the command continues to fail, please report to WSO2 at
+<a href="https://wso2.com/contact">https://wso2.com/contact</a>.</p>
+<p>Please be sure to attach the details of the error when you report. You
+can get the details by running the same command again using the '-v'
+flag.</p>
+<p>wum: servers are busy at the moment. Please try again later.</p>
+<p>The WSO2 Update server has reached the maximum capacity for handling
+requests at the current moment.</p>
+<p>wum: generating wum file twice. The file '&lt;FileName&gt;' has been
+added by a previous update. Current update is'&lt;UpdateNumber&gt;'</p>
+<p>WSO2 updates are cumulative, which means that once the update files
+relevant to one particular update are downloaded once to your local
+update repository, the same update file will not be downloaded again in
+consequent updates. This error can sometimes (rarely) occur in
+situations where a cumulative file is erroneously downloaded twice.</p>
+<p>wum: invalid update file. Cannot find the update-descriptor.yaml
+file'&lt;FilePath&gt;'</p>
+<p>Some updates dispatched from the WSO2 Update server does not contain the
+<code class="codehilite">update-descriptor.</code>yaml file. This file is stored inside the update
+file that is downloaded to your local update repository.</p>
+<p>wum: unknown form at in the update-descriptor.yamlfile'&lt;FilePath&gt;'
+reason: &lt;Error Message&gt;</p>
+<p>Some updates dispatched from the WSO2 Update server contains an
+erroneous <code class="codehilite">update-descriptor.</code>yaml file. This file is stored inside the
+update file that is downloaded to your local update repository.</p>
+<p>wum: unable to zip directory '&lt;DirectoryPath&gt;' reason: &lt;Error
+Message&gt;</p>
+<p>When you run the 'wum update' or 'wum diff' commands, ZIP files should
+be created with the relevant distribution/files inside your local
+product repository. However, prior to creating the ZIP inside the
+product repository, the original product distribution is copied to a
+temporary directory location in order to apply the updates.</p>
+<p>This error occurs if the product distribution (in the temporary
+location) is deleted prior to generating the new ZIP file.</p>
+<p>wum: unable to download updates reason: &lt;Error Message&gt;</p>
+<p>WUM is unable to download the updates from the WSO2 Update server.</p>
+<p>wum: invalid JWT string to process reason: &lt;Error Message&gt;</p>
+<p>The JWT string is not in a valid format.</p>
+<p>wum: cannot find the MD5 file of the specified product in WSO2 Update</p>
+<p>WUM is unable to find the md5 sum of a file.</p>
+<p>wum: unable to generate the update summary. reason: &lt;Error
+Message&gt;</p>
+<p>WUM is not able to generate the update summary PDF for various reasons.
+When WUM generates a new product distribution ZIP file or a WUM diff ZIP
+file, a summary PDF file should be generated and stored inside the ZIP
+file (stored in the local product repository). The updated
+distribution/ZIP will not be created without the summary ZIP.</p>
+<p>wum: invalid update file. Update number of the update file name
+'&lt;FilePath&gt;' is not equal to update number specified in
+update-descriptor.yamlfile(&lt;UpdateNumber&gt;)</p>
+<p>When WUM generates a new product distribution (ZIP file) or a ZIP file
+with updates (WUM Diff), your local update repository is checked for
+updates that have already been downloaded during previous updates.</p>
+<p>This error occurs when at least one of the update files in the local
+update repository is invalid, or if it has been manipulated by a user.</p>
+<p>wum: invalid credentials  </p>
+<p>The credentials you provided are not valid. If your WSO2 account was
+created a short while back, the reason for the login failure may be that
+your credentials are not synced in the WSO2 Update server.</p>
+<p>Try again by providing the correct credentials. If your account was
+created a short while back, you might have to wait.</p>
+<p>If authentication is still failing, please report to WSO2 at
+<a href="https://wso2.com/contact">https://wso2.com/contact</a>.</p>
+<p>Please be sure to attach the details of the error when you report. You
+can get the details by running the same command again using the <a href="#Troubleshooting-wum_commands">'-v'
+flag</a>.</p>
+<p>wum: you haven't initialized WUM with your WSO2 credentials</p>
+<p>You have not initialized WUM. In order to update products, WUM should
+first be initialized.</p>
+<p>You can run the 'wum init' command to initialize WUM using your
+credentials.</p>
+<p>See the <a href="Getting-Started_103318232.html">instructions on initializing
+WUM</a> for more information.</p>
+<p>wum: your session has timed out</p>
+<p>The user session has timed out.</p>
+<p>wum: unable to read your input reason: &lt;Error Message&gt;</p>
+<p>The input value you provided with the wum command is invalid.</p>
+<p>Enter a valid input for the wum command and try again.</p>
+<p>See <a href="Getting-Started_103318232.html">Getting Started with WUM</a> for
+instructions on using the wum commands.</p>
+<p>wum: file not found</p>
+<p>You are attempting to add a product from a specific directory path to
+the local product repository using the following command:</p>
+<div class="codehilite"><pre><span></span><span class="n">wum</span> <span class="n">add</span> <span class="o">--</span><span class="n">file</span> <span class="o">&lt;</span><span class="n">Path_to_product_download</span><span class="o">&gt;/&lt;</span><span class="n">product</span><span class="o">&gt;.</span><span class="na">zip</span>
+</pre></div>
+
+<p>However, the product file is not available in the directory you
+specified.</p>
+<p>Verify the directory path of the product distribution that you want to
+add to the repository, and then run the command again.</p>
+<p>See the <a href="Getting-Started_103318232.html">instructions on adding products to the product
+repository</a>.  </p>
+<p>wum: invalid product filename: &lt;ProductFileName&gt;</p>
+<p>The name of the product distribution that you provided with the wum
+command is wrong or it does not exist in the local product repository.</p>
+<p>Verify the product distribution's name and run the command again.</p>
+<p>wum: product &lt;productName-productVersion&gt; is already added</p>
+<p>The product version that you are trying to add to your local product
+repository already exists in the repository.</p>
+<p>Try the following:</p>
+<ol>
+<li>First, delete the distribution from the local product repository
+    using the '<a href="WUM-Commands-Guide_103318237.html">wum delete</a>' command.</li>
+<li>Then, try adding the product again.</li>
+</ol>
+<p>wum: your product distribution '&lt;ProductFileName&gt;' contains local
+modifications. MD5 check failed.<br />
+Please use the original product distribution.</p>
+<p>The product distribution that you are trying to update contains local
+modifications. WUM updates can only be applied to original product
+distributions (ZIP files) or to original product distributions that have
+been updated by WUM previously.</p>
+<p>Try the following:</p>
+<ol>
+<li>First, delete the distribution with local modifications from the
+    product repository using the '<a href="WUM-Commands-Guide_103318237.html">wum
+    delete</a>' command.</li>
+<li><a href="Getting-Started_103318232.html">Add a new product</a>.</li>
+<li><a href="Getting-Continuous-Updates_103318234.html">Update the new product</a>
+    you added.</li>
+</ol>
+<p>wum: cannot find a matching product for '&lt;Pattern&gt;'</p>
+<p>When executing the wum command, the pattern you used to specify the
+product is wrong.</p>
+<p>When you run the wum command, specify the product using a pattern that
+matches the product name. For example, wso2esb-4.9.0, wso2esb, wso2e
+etc.</p>
+<p>wum: unable to parse the given product pattern '&lt;ProductPattern&gt;'.
+reason: &lt;Error Message&gt;</p>
+<p>wum: product '&lt;ProductName-ProductVersion&gt;' is not supported by
+WSO2 Update.</p>
+<p>wum: invalid product '&lt;ProductName-ProductVersion&gt;'</p>
+<p>wum: you are not supposed to set a value for
+'repositories.&lt;RepoName&gt;.refreshtoken'</p>
+<p>You are using the 'wum config' command to change the refresh token of
+the product repository (specified in the <code class="codehilite">config.yaml</code> file), which is
+not allowed.</p>
+<p>You are not allowed to change the refresh token, access token or any
+other element related to the local product repository (except the
+directory location).</p>
+<p>The 'wum config' command should only be used to change the location of
+the local product repository as explained here.</p>
+<p>wum: you are not supposed to set a value for
+'repositories.&lt;RepoName&gt;.accesstoken'</p>
+<p>You are using the 'wum config' command to change the access token of the
+product repository (specified in the <code class="codehilite">config.yaml</code> file), which is not
+allowed.</p>
+<p>wum: invalid repository config element '&lt;ConfigElement&gt;'</p>
+<p>You are using the 'wum config' command to change an element in the
+product repository (specified in the <code class="codehilite">config.yaml</code> file), which is not
+allowed.</p>
+<p>wum: invalid wumconfig element '&lt;Arguement&gt;'<br />
+Try 'wum config --help' for more information.</p>
+<p>You are using the 'wum config' command to change an element in the
+product repository (specified in the <code class="codehilite">config.yaml</code> file), which is not
+allowed.</p>
+<p>wum: invalid number of arguments<br />
+Try 'wum config --help' for more information.</p>
+<p>The 'wum config' command can only have two valid arguments. You are
+running the 'wum config' command using more than two arguments.</p>
+<p>When you are running the 'wum config' command to change the local
+product repository location, you should provide both the key and value
+corresponding to the product repository (specified in the <code class="codehilite">config.yaml</code>
+file) as shown below.</p>
+<div class="codehilite"><pre><span></span><span class="n">wum</span> <span class="n">config</span> <span class="n">local</span><span class="o">.</span><span class="na">product</span><span class="o">.</span><span class="na">repo</span> <span class="o">~/&lt;</span><span class="n">new_directory_path</span><span class="o">&gt;</span>
+</pre></div>
+
+<ul>
+<li>Key: <code class="codehilite">local.product.repo</code></li>
+<li>Value: <code class="codehilite">~/&lt;new_directory_path&gt;</code></li>
+</ul>
+<p>wum:wumconfiguration is not available.</p>
+<p>The WUM configuration file (<code class="codehilite">config.yaml</code>) stored in your local
+<code class="codehilite">WUM_HOME</code> directory ( <code class="codehilite">~/.wum-wso2/</code>) is not available.</p>
+<p>Try executing the '<a href="WUM-Commands-Guide_103318237.html">wum init</a>'
+command, which will create the configuration file.</p>
+<p>wum: unable to get the absolute path of '&lt;Argument&gt;'</p>
+<p>The path to the product distribution, which you provided with the
+following command is not the absolute path:</p>
+<div class="codehilite"><pre><span></span><span class="n">wum</span> <span class="n">add</span><span class="o">--</span><span class="n">file</span> <span class="o">&lt;</span><span class="n">Path_to_product_download</span><span class="o">&gt;/&lt;</span><span class="n">product</span><span class="o">&gt;.</span><span class="na">zip</span>
+</pre></div>
+
+<p>The relative path is not allowed with this command.</p>
+<p>Run the command again using the absolute path to the product
+distribution, instead of the relative path.</p>
+<p>wum: you haven't added any products yet</p>
+<p>You are attempting to execute a wum command without adding a product to
+your local product repository.</p>
+<p>Add the needed products to the local product repository by running the
+'<a href="WUM-Commands-Guide_103318237.html">wum add</a>' command.</p>
+<p>wum: cannot validate the target distribution
+'&lt;ProductName&gt;-&lt;ProductVersion&gt;.&lt;Timestamp&gt;'. Some
+updates required are missing from the local repository, which are found
+in the target distribution.</p>
+<p>You have executed the 'wum diff' command to get the updates between two
+product distributions. However, some updates, which are included in the
+newer product distribution (stored in the local product repository) are
+not available in the local update repository. When a WUM-updated product
+distribution is created inside the local product repository, the
+corresponding updates should be stored in the local update repository as
+well.</p>
+<p>This error may be because you have modified the contents of the local
+update repository.</p>
+<p>Try the following:</p>
+<ol>
+<li>First, delete the latest distribution from the product repository
+    using the '<a href="WUM-Commands-Guide_103318237.html">wum delete</a>' command.</li>
+<li>Generate a new updated distribution using the '<a href="WUM-Commands-Guide_103318237.html">wum
+    update</a>' command.</li>
+<li>Then, try the '<a href="WUM-Commands-Guide_103318237.html">wum diff</a>'
+    command again.</li>
+</ol>
+<p>wum: unable to unzip file '&lt;FilePath&gt;' reason: &lt;Error
+Message&gt;</p>
+<p>You are attempting to update a product using the 'wum add' command, or
+you are attempting to run the 'wum diff' command. However, the required
+product ZIP files (in the local product repository) are unable to unzip
+due to some corruption.</p>
+<p>Try downloading the ZIP file again and run the 'wum update' or 'wum
+diff' command.</p>
+<p>wum: local repository path is not available.</p>
+<p>When WUM is initialized, your local <code class="codehilite">WUM_HOME</code> directory
+(<code class="codehilite">~/.wum-wso2/</code>) is created, which contains the local update repository
+and the local product repository as explained here.</p>
+<p>This error occurs if the local product repository's path is missing in
+the <code class="codehilite">config.yaml</code> file.</p>
+<p>Update the product repository path in the <code class="codehilite">config.</code>yaml file using the
+'<a href="WUM-Commands-Guide_103318237.html">wum config</a>' command.</p>
+<p>wum: unable to delete file '&lt;FilePath&gt;'. Please delete the file
+manually. reason: &lt;Error Message&gt;</p>
+<p>You have executed the 'wum delete' command, but WUM is unable to delete
+the specified product file.</p>
+<p>You can try manually deleting the product file from the local product
+repository.</p>
+<p>wum: unable to download. cannot find a matching product for
+'&lt;ProductName-ProductVersion&gt;'</p>
+<p>You have executed the 'wum add' command to download a product
+distribution and to add it to the local product repository. However, the
+product name you specified is not available for downloading.</p>
+<p>Verify that the product name and version you provide is valid, and try
+again.</p>
+<p>See the instructions on adding products for more information.</p>
+<p>wum: invalid timestamp value '%!d(string=&lt;Timestamp&gt;)'</p>
+<p>The timestamp of the update file (stored in the local update repository)
+or the product distribution file (stored in the local product
+repository) has been manually changed.</p>
+<p>Try providing a valid timestamp and running the wum command again.</p>
+<p>wum: invalid product '&lt;ProductName-ProductVersion&gt;'. Product
+version is missing</p>
+<p>The pattern used to specify the product does not include the valid
+product version. When the 'wum update' or 'wum diff' commands are
+executed, the product name should include the version name.</p>
+<p>Try providing a valid product pattern, which includes the correct
+product version.</p>
+<p>Follow the instructions in Getting Started with WUM.</p>
+<p>wum: username or password cannot be empty</p>
+<p>You have executed the 'wuminit' command to initialize WUM without
+providing values for the username and password.</p>
+<p>Give your credentials for the username and password, and try again.</p>
+<p>See the instructions on initializing WUM.</p>
+<p>wum: requires a product<br />
+Try 'wum add --help' for more information.</p>
+<p>You have not specified a product with the 'wum add' command. Note that
+only one product can be specified at a time.</p>
+<p>Make sure that the product name is specified when running the 'wum add'
+command.</p>
+<p>See the instructions on adding products for more information.</p>
+<p>wum: requires only 1 product<br />
+Try 'wum add --help' for more information.</p>
+<p>You cannot specify more than one product with the 'wum add' command.</p>
+<p>Make sure that only one product is specified with the 'wum add' command.</p>
+<p>See the instructions on adding products for more information.</p>
+<p>wum: requires only 1 product pattern<br />
+Try 'wum check-update --help' for more information.</p>
+<p>You cannot specify more than one product with the 'check-update'
+command.</p>
+<p>Make sure that only one product is specified with 'check-update'
+command.</p>
+<p>See the instructions on checking updates for more information.</p>
+<p>wum: requires two updated product distributions<br />
+Try 'wum diff --help' for more information.</p>
+<p>You have executed the 'wum diff' command to get the updates between two
+product distributions. However, you have only provided a single product
+distribution.</p>
+<p>Provide the two product distributions (with different timestamps) that
+you want to compare, and try the 'wum diff' command again.</p>
+<p>Be sure to use the product distribution names (including timestamps)
+accurately.</p>
+<p>wum: invalid update distribution names '&lt;Distibution1&gt;' -
+'&lt;Distibution2&gt;'<br />
+Try 'wum diff --help' for more information.</p>
+<p>You have executed the 'wum diff' command to get the updates between two
+product distributions. However, the provided product distribution names
+are wrong.</p>
+<p>wum: update levels cannot be the same<br />
+Try 'wum diff --help' for more information.</p>
+<p>You have executed the 'wum diff' command to get the updates between two
+product distributions. However, you have provided the same product
+distribution twice.</p>
+<p>wum: requires only 1 product pattern<br />
+Try 'wum list --help' for more information.</p>
+<p>You have executed the 'wum list' command to get the list of product
+distributions management by WUM. However, you have specified multiple
+products.</p>
+<p>Try the 'wum list &lt;product_name&gt;' command with a single product
+or try the 'wum list' command to get the list of all products.</p>
+<p>See the instructions on checking the list of products managed by WUM.</p>
+<p>You may encounter the following error messages due to permission
+restrictions at OS-level.</p>
+<p>WUM Message</p>
+<p>Explanation</p>
+<p>Possible Solution</p>
+<p>wum: unable to create directory '&lt;Dir&gt;' reason: &lt;Error
+Message&gt;</p>
+<p>WUM is unable to create the specified directory in the relevant
+location.</p>
+<p>Check the permissions (OS-level) for creating folders in the relevant
+locations. For example, you can enable permission to create folders in
+the following locations:</p>
+<ul>
+<li>WUM Home directory.</li>
+<li>OS-specific temporary directory.</li>
+</ul>
+<p>Also, check the available disc space and free some space if the
+available space is insufficient.</p>
+<p>If the error occurs even after enabling the above permissions, please
+report to WSO2 at <a href="https://wso2.com/contact">https://wso2.com/contact</a>.</p>
+<p>Please be sure to attach the details of the error when you report. You
+can get the details by running the same command again using the '-v'
+flag.</p>
+<p>wum: unable to copy file '&lt;File&gt;' to '&lt;Path&gt;' reason:
+&lt;Error Message&gt;</p>
+<p>WUM is unable to copy the specified file to the relevant path.</p>
+<p>wum: Failed to create directory: &lt;DirectoryPath&gt;. reason:
+&lt;Error Message&gt;</p>
+<p>WUM is unable to create the directory in the relevant location.</p>
+<p>wum: unable to update LICENSE.txt of the product reason: &lt;Error
+Message&gt;</p>
+<p>WUM is unable to update the <code class="codehilite">LICENSE.txt</code> file of the product.</p>
+<p>wum: unable to generate update log file. reason: &lt;Error Message&gt;</p>
+<p>WUM is unable to generate the update log file (metadata file) inside the
+local update repository.</p>
+<p>wum: unable to store update summary. reason: &lt;Error Message&gt;</p>
+<p>WUM is unable to store the update summary PDF in the local product
+repository. When you execute the 'wum update' or 'wum diff' commands, an
+update summary PDF file should be generated and stored inside the ZIP
+file (which is the updated product ZIP, or the ZIP file created with the
+WUM Diff).</p>
+<p>wum: unable to delete the file as adviced in the update
+'&lt;FilePath&gt;' reason: &lt;Error Message&gt;</p>
+<p>When applying updates to the existing product distribution, WUM is
+unable to delete files in the existing product distribution (as required
+for the update).</p>
+<p>wum: unable to load wum configuration from '&lt;FilePath&gt;'. reason:
+&lt;Error Message&gt;</p>
+<p>WUM is unable to read the <code class="codehilite">config.yaml</code> file in order to execute the
+command.</p>
+<p>wum: unable to create wum configuration. reason:</p>
+<p>WUM is unable to create the <code class="codehilite">config.yaml</code>file in order to execute WUM.</p>
+<p>wum: unable to calculate the MD5 of the specified file
+'&lt;FilePath&gt;' reason: &lt;Error Message&gt;</p>
+<p>WUM is unable to calculate the MD5 sum of the specified file.</p>
+<p>wum: unable to read directory '&lt;ProductDir&gt;' reason: &lt;Error
+Message&gt;</p>
+<p>WUM is unable to read the specified directory when running the command.</p>
+<p>wum: unable to delete the product: &lt;FilePath&gt; reason: &lt;Error
+Message&gt;</p>
+<p>WUM is unable to delete the specified file when running the command.</p>
+<p>wum: Cannot create the temp directory wum-temp. reason: &lt;Error
+Message&gt;</p>
+<p>WUM is unable to create the temporary directory when running the
+command.</p>
+<p>wum: unable to create file '&lt;FilePath&gt;' reason: &lt;Error
+Message&gt;</p>
+<p>WUM is unable to create the file when running the command</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Getting_Continuous_Updates/" title="WUM Commands Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                WUM Commands Guide
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Best_Practices_Guide/" title="Best Practices Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Best Practices Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.9e1f3b71.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
