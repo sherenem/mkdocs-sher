@@ -44,27 +44,15 @@ seamless update process and a lower number of merge conflicts.
 <td>.json files</td>
 <td><div class="content-wrapper">
 <p>Maintain the same code indentation of the original .json files in the updated .json files. Else, there will be merge conflicts.</p>
-<div id="expander-170396974" class="expand-container">
-<div id="expander-control-170396974" class="expand-control">
-<img src="images/icons/grey_arrow_down.png" class="expand-control-image" />See example...
-</div>
-<div id="expander-content-170396974" class="expand-content">
+??? note "Click to see example"
 <p>Shown below is the difference between a .json file before and after a modification. As shown, the indentation has changed in the updated file and this might result in a merge conflict in the WSO2 in-place update tool.</p>
-</div>
-</div>
+
 <p>Maintain the order of the .json file as much as possible. For example, when you add a new key-value pair, add it to the end of the file.</p>
-<div id="expander-231233156" class="expand-container">
-<div id="expander-control-231233156" class="expand-control">
-<img src="images/icons/grey_arrow_down.png" class="expand-control-image" />See example...
-</div>
-<div id="expander-content-231233156" class="expand-content">
+??? note "Click to see example"
 <p>Shown below is the difference between a .json file before and after a modification. As shown, the new key-value pair is not added to the end of the file. As a result, line number 2 in the original file is not the same as the updated file, which will cause a merge conflict in the WSO2 in-place update tool.</p>
-<p><br />
-</p>
-<div>
+
 There will not be merge conflicts when the new line is added to the end of the file, preserving the original order:
-</div>
-<div>
+
 
 </div>
 </div>

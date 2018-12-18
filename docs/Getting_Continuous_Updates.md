@@ -12,18 +12,18 @@ production setup with the WUM-updated setup.
 Before you begin, do you have a proxy server/firewall? Then, grant
 access to the endpoints mentioned below.
 
-??? note "Click to expand"
+??? note "Click for more information"
 
-WUM gets updates by connecting to the `https://api.updates.wso2.com`
-and `https://cdn.updates.wso2.com` endpoints in the WSO2 Update service.
-If your system connects to the Update service through a proxy
-server/firewall, grant access to these endpoints.  
-Since WUM is a command-line tool, the proxy should be configured from
-your command-line as follows: 
+    WUM gets updates by connecting to the `https://api.updates.wso2.com`
+    and `https://cdn.updates.wso2.com` endpoints in the WSO2 Update service.
+    If your system connects to the Update service through a proxy
+    server/firewall, grant access to these endpoints.  
+    Since WUM is a command-line tool, the proxy should be configured from
+    your command-line as follows: 
 
-``` java
-export http_proxy=http://username:password@proxyhost:port/
-```
+    ```#!js
+    export http_proxy=http://username:password@proxyhost:port/
+    ```
 
 If you are behind an NTLM proxy, you can use a third party tool like
 **[CNTLM](http://cntlm.sourceforge.net/)** to do the NTLM proxy
@@ -33,7 +33,7 @@ documentation](http://cntlm.sourceforge.net/) for instructions.
 1.  Run the following commands to check whether there are updates
     available:
 
-    ``` java
+    ```#!js
     wum check-update <product>
     E.g., wum check-update wso2am-2.5.0
     ```
