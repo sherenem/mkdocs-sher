@@ -1,0 +1,729 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-\.]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>WUM Commands Guide - WSO2 Update Manager Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,700|Courier+New">
+        <style>body,input{font-family:"Nunito Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Courier New","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#getting-continuous-updates" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="WSO2 Update Manager Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="../images/WSO2_Software_Logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                WSO2 Update Manager Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                WUM Commands Guide
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Introduction/" title="Getting Started" class="md-tabs__link">
+          Getting Started
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Getting_Started/" title="Using WSO2 Update Manager" class="md-tabs__link md-tabs__link--active">
+          Using WSO2 Update Manager
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Troubleshooting/" title="Guides" class="md-tabs__link">
+          Guides
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../FAQ/" title="FAQ" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="WSO2 Update Manager Documentation" class="md-nav__button md-logo">
+      
+        <img src="../images/WSO2_Software_Logo.png" width="48" height="48">
+      
+    </a>
+    WSO2 Update Manager Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../WSO2_Updates/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Using_WSO2_In-Place_Updates/" title="Using WSO2 In-Place Updates" class="md-nav__link">
+      Using WSO2 In-Place Updates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Using WSO2 Update Manager
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Using WSO2 Update Manager
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting_Started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="./" title="Getting Continuous Updates" class="md-nav__link">
+      Getting Continuous Updates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Restoring_the_Previous_Setup/" title="Restoring the Previous Setup" class="md-nav__link">
+      Restoring the Previous Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="WUM Commands Guide" class="md-nav__link md-nav__link--active">
+      WUM Commands Guide
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Troubleshooting/" title="Troubleshooting Guide" class="md-nav__link">
+      Troubleshooting Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Best_Practices_Guide/" title="Best Practices Guide" class="md-nav__link">
+      Best Practices Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="getting-continuous-updates">Getting Continuous Updates</h1>
+<p>If you are <strong>an existing WUM user</strong>, do the following to update your
+products. If not, see <a href="Getting-Started_103318232.html">Getting Started with
+WUM</a>.</p>
+<p>In these steps, you move updates to production by extracting the updates
+into a ZIP file, testing the updates, and then manually merging them to
+the existing product distribution. You do not replace the existing
+production setup with the WUM-updated setup.</p>
+<p>Before you begin, do you have a proxy server/firewall? Then, grant
+access to the endpoints mentioned below.</p>
+<details class="note"><summary>Click for more information</summary><p>WUM gets updates by connecting to the <code class="codehilite">https://api.updates.wso2.com</code>
+and <code class="codehilite">https://cdn.updates.wso2.com</code> endpoints in the WSO2 Update service.
+If your system connects to the Update service through a proxy
+server/firewall, grant access to these endpoints.<br />
+Since WUM is a command-line tool, the proxy should be configured from
+your command-line as follows: </p>
+<p><code class="codehilite"><span class="kr">export</span> <span class="nx">http_proxy</span><span class="o">=</span><span class="nx">http</span><span class="o">:</span><span class="c1">//username:password@proxyhost:port/</span></code></p>
+</details>
+<p>If you are behind an NTLM proxy, you can use a third party tool like
+<strong><a href="http://cntlm.sourceforge.net/">CNTLM</a></strong> to do the NTLM proxy
+authentication. See the <a href="http://cntlm.sourceforge.net/">CNTLM
+documentation</a> for instructions.</p>
+<ol>
+<li>
+<p>Run the following commands to check whether there are updates
+    available:</p>
+<p><code class="codehilite"><span class="nx">wum</span> <span class="nx">check</span><span class="o">-</span><span class="nx">update</span> <span class="o">&lt;</span><span class="nx">product</span><span class="o">&gt;</span><span class="nx">E</span><span class="p">.</span><span class="nx">g</span><span class="p">.,</span> <span class="nx">wum</span> <span class="nx">check</span><span class="o">-</span><span class="nx">update</span> <span class="nx">wso2am</span><span class="o">-</span><span class="mf">2.5.0</span></code></p>
+</li>
+<li>
+<p>If an update is available, run the following command to start
+    updating your product:</p>
+<div class="codehilite"><pre><span></span><span class="n">wum</span> <span class="n">update</span> <span class="o">&lt;</span><span class="n">product</span><span class="o">&gt;</span>
+<span class="n">E</span><span class="o">.</span><span class="na">g</span><span class="o">.,</span> <span class="n">wum</span> <span class="n">update</span> <span class="n">wso2am</span><span class="o">-</span><span class="mf">2.5.0</span>
+</pre></div>
+
+<p>Your local product repository should now contain the latest and the
+previous WUM-updated distributions. Let's extract the updates in the
+latest WUM-updated distribution to a ZIP file.</p>
+</li>
+<li>
+<p>Execute the following command to identify the previous WUM-updated
+    pack for this product.</p>
+<div class="codehilite"><pre><span></span><span class="n">wum</span> <span class="n">list</span> <span class="o">[</span><span class="n">product</span><span class="o">-</span><span class="n">name</span><span class="o">]</span>
+<span class="n">E</span><span class="o">.</span><span class="na">g</span><span class="o">.,</span> <span class="n">wum</span> <span class="n">list</span> <span class="n">wso2am</span>
+</pre></div>
+
+</li>
+<li>
+<p>Execute the following command:
+    <div class="codehilite"><pre><span></span><span class="n">wum</span> <span class="n">diff</span> <span class="o">&lt;</span><span class="n">Latest</span><span class="o">-</span><span class="n">WUM</span><span class="o">-</span><span class="n">updated</span><span class="o">-</span><span class="n">distribution</span><span class="o">.</span><span class="na">zip</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Previous</span><span class="o">-</span><span class="n">WUM</span><span class="o">-</span><span class="n">updated</span><span class="o">-</span><span class="n">distribution</span><span class="o">.</span><span class="na">zip</span><span class="o">&gt;</span>
+</pre></div></p>
+</li>
+</ol>
+<blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note<p><strong>Note</strong> that the diff ZIP is created in the location from where you
+executed the diff command.</p>
+</p>
+</div>
+<p>Next, let's apply the WUM updates that you extracted to the ZIP file
+    to the distribution pack that is currently running in your
+    environment.</p>
+</blockquote>
+<ol>
+<li>
+<p>Open the summary PDF that you get inside this ZIP file (also via
+    email). It contains information about the:</p>
+<ul>
+<li>
+<p>New configurations introduced with the update.</p>
+</li>
+<li>
+<p>Existing files/artifacts that are affected due to the update.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you do not have any customizations in the existing distribution,
+    simply copy the changed configuration files mentioned in the ZIP to
+    the corresponding directories in your product distribution.</p>
+</li>
+<li>
+<p>If you **have **customizations in the existing distribution, there
+    might be conflicts between that and the WUM-updated distribution. </p>
+<p><img alt="" src="../images/icons/grey_arrow_down.png" />{.expand-control-image}Click to
+read how to resolve conflicts...</p>
+<p>A conflict happens when a customized configuration file or artifact
+has changed in the WUM updates. As the file/artifact has your
+customizations in it, it is not recommended to completely replace
+this file with the file that comes with the update.</p>
+<p>Given below is how to resolve conflicts manually in different types
+of files/artifacts:</p>
+<p><table>
+<thead>
+<tr class="header">
+<th>File Type</th>
+<th>How to Merge the Conflicts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Binary files</td>
+<td><div class="content-wrapper">
+<p>Copy all the binary files (.jar, .jks, .car, .war) to the relevant directories in your existing product distribution. If you have made any customizations to .car and .war files, manually merge those changes.</p>
+<div>
+<div>
+<p>Note: If there are .war files in the WUM update, be sure to delete all extracted .war files in your existing product distribution.</p>
+<p>This is because all deployed .war files get extracted at the server startup and if there are already extracted .war files by that same name, the server will not extract the .war files in the WUM update.</p>
+</div>
+</div>
+</div></td>
+</tr>
+<tr class="even">
+<td>Jaggery files</td>
+<td><p>You cannot replace the Jaggery artifacts in your existing product distribution with the WUM-updated Jaggery artifacts because your existing Jaggery artifacts may contain customizations. Here's how to merge the files:</p>
+<ol>
+<li>Check the summary PDF to identify how the Jaggery files have changed because of the WUM updates.</li>
+<li>Apply the changes to the same files in your existing product distribution.</li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td>Apply the updated configuration files</td>
+<td><p>Identify the configuration updates in the summary PDF and apply them (by merging) to the relevant configuration files in the /repository/conf folder of your existing product distribution.</p>
+<p>Note: Be sure to merge the configuration files in your environment with the new files. It is not recommended to replace them.</p></td>
+</tr>
+<tr class="even">
+<td>Redundant files</td>
+<td>If there are artifacts/files that are removed by the WUM updates, remove them from your existing product distribution.</td>
+</tr>
+<tr class="odd">
+<td>Newly added files</td>
+<td>If there are newly added files listed in the PDF, create the same folder structure (if it doesn't exist) in your existing product distribution and add the file.</td>
+</tr>
+</tbody>
+</table></p>
+</li>
+<li>
+<p>Do you have additional WSO2 features installed in your product
+    distribution? If so,</p>
+<p><img alt="" src="../images/icons/grey_arrow_down.png" />{.expand-control-image}Click to
+read on...</p>
+<p>Please note that WSO2 <strong>does not</strong> <strong>recommend</strong> installing new
+features to standard products. If you already have features
+installed, you need to install the same features in the new product
+distribution and apply the patches. Please contact team WSO2 as this
+needs to be handled on a case-by-case basis.</p>
+</li>
+<li>
+<p>Test the updated product distribution and deploy it in your
+    production environment.</p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Restoring_the_Previous_Setup/" title="Restoring the Previous Setup" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Restoring the Previous Setup
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Troubleshooting/" title="Troubleshooting Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Troubleshooting Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.9e1f3b71.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

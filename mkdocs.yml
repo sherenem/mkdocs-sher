@@ -1,5 +1,9 @@
 site_name: WSO2 Update Manager Documentation
 
+# Repository
+repo_name: View on Github
+repo_url: https://github.com/sherenewso2/mkdocs-sher
+
 nav:
     - Home: WSO2_Updates.md
     - Getting Started:
@@ -13,6 +17,7 @@ nav:
     - Guides:
       - 'Troubleshooting Guide': 'Troubleshooting.md'
       - 'Best Practices Guide': 'Best_Practices_Guide.md'
+      - 'Developer Guide': 'Developer_Guide.md'
     - FAQ:
       - 'Frequently Asked Questions': 'FAQ.md'
 
@@ -30,10 +35,11 @@ theme:
     tabs: true  
 
 extra:
-  search:
+    version: '2.4.4'
+    search:
     language: 'en'
-    tokenizer: '[\s\-\.]+'  
-
+    tokenizer: '[\s\-\.]+'
+   
 plugins:
    - search
 
