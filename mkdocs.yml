@@ -18,6 +18,7 @@ nav:
       - 'Troubleshooting Guide': 'Troubleshooting.md'
       - 'Best Practices Guide': 'Best_Practices_Guide.md'
       - 'Developer Guide': 'Developer_Guide.md'
+        - 'Testing sub page': 'FAQ.md'
     - FAQ:
       - 'Frequently Asked Questions': 'FAQ.md'
 
